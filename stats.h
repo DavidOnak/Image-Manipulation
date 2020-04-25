@@ -1,12 +1,12 @@
 #ifndef _STATS_H
 #define _STATS_H
 
-#include "cs221util/PNG.h"
-#include "cs221util/RGBAPixel.h"
+#include "imageUtil/PNG.h"
+#include "imageUtil/RGBAPixel.h"
 #include <utility>
 #include <vector>
 using namespace std;
-using namespace cs221util;
+using namespace imageUtil;
 
 class stats {
 

@@ -1,7 +1,6 @@
 #include "HSLAPixel.h"
 
-namespace cs221util {
-	
+namespace imageUtil {
 	HSLAPixel::HSLAPixel() {
 		s = 0.0;
 		l = 1.0;
@@ -19,6 +18,5 @@ namespace cs221util {
 		s = saturation;
 		l = luminance;
 		a = alpha;
-	}
-		
+	}	
 }

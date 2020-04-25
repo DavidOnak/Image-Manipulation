@@ -1,9 +1,3 @@
-/**
- * @file PNG.h
- *
- * @author CS 221: Data Structures
- */
-
 #ifndef CS221UTIL_PNG_H
 #define CS221UTIL_PNG_H
 
@@ -13,7 +7,7 @@
 
 using namespace std;
 
-namespace cs221util {
+namespace imageUtil {
   class PNG {
   public:
     /**

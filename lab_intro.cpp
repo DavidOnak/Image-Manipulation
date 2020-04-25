@@ -2,11 +2,11 @@
 #include <cmath>
 #include <cstdlib>
 
-#include "cs221util/PNG.h"
-#include "cs221util/HSLAPixel.h"
+#include "imageUtil/PNG.h"
+#include "imageUtil/HSLAPixel.h"
 #include "lab_intro.h"
 
-using namespace cs221util;
+using namespace imageUtil;
 
 /**
  * Returns an image that has been transformed to grayscale.

@@ -1,17 +1,9 @@
-/**
- * @file RGBAPixel.cpp
- * Implementation of the RGBAPixel class for use in with the PNG library.
- *
- * @author CS 225: Data Structures
- * @version 2018r1
- */
-
 #include "RGBAPixel.h"
 #include <cmath>
 #include <iostream>
 using namespace std;
 
-namespace cs221util {
+namespace imageUtil {
   RGBAPixel::RGBAPixel() {
     r = 0;
     g = 0;
@@ -41,8 +33,6 @@ namespace cs221util {
   }
 
   bool RGBAPixel::operator== (RGBAPixel const & other) const {
-    // thank/blame Wade for the following function
-    // adapted by cinda to allow for slight deviations in RGB
 
     if ( a == 0 ) { return true; }
     if (fabs(a - other.a) > 0.01) { return false; }
@@ -59,7 +49,6 @@ namespace cs221util {
   }
 
   bool RGBAPixel::operator<  (RGBAPixel const & other) const {
-    // Cinda is not sure where this is used. Fairly arb total
     // order is reflected here. R->G->B.
       if (*this == other) { return false; }
 
@@ -78,6 +67,4 @@ namespace cs221util {
 
     return out;
   }
-
-
 }

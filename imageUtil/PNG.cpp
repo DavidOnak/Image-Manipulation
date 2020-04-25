@@ -1,10 +1,3 @@
-/**
- * @file PNG.cpp
- * Implementation of a simple PNG class using HSLAPixels and the lodepng PNG library.
- *
- * @author CS 221: Data Structures
- */
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -12,7 +5,7 @@
 #include "PNG.h"
 #include "RGB_HSL.h"
 
-namespace cs221util {
+namespace imageUtil {
   void PNG::_copy(PNG const & other) {
     // Clear self
     delete[] imageData_;
@@ -62,20 +55,20 @@ namespace cs221util {
 
   HSLAPixel * PNG::getPixel(unsigned int x, unsigned int y) {
     if (width_ == 0 || height_ == 0) {
-      cerr << "ERROR: Call to cs221util::PNG::getPixel() made on an image with no pixels." << endl;
+      cerr << "ERROR: Call to imageUtil::PNG::getPixel() made on an image with no pixels." << endl;
       cerr << "     : Returning NULL." << endl;
       return NULL;
     }
 
     if (x >= width_) {
-      cerr << "WARNING: Call to cs221util::PNG::getPixel(" << x << "," << y << ") tries to access x=" << x
+      cerr << "WARNING: Call to imageUtil::PNG::getPixel(" << x << "," << y << ") tries to access x=" << x
           << ", which is outside of the image (image width: " << width_ << ")." << endl;
       cerr << "       : Truncating x to " << (width_ - 1) << endl;
       x = width_ - 1;
     }
 
     if (y >= height_) {
-      cerr << "WARNING: Call to cs221util::PNG::getPixel(" << x << "," << y << ") tries to access y=" << y
+      cerr << "WARNING: Call to imageUtil::PNG::getPixel(" << x << "," << y << ") tries to access y=" << y
           << ", which is outside of the image (image height: " << height_ << ")." << endl;
       cerr << "       : Truncating y to " << (height_ - 1) << endl;
       y = height_ - 1;

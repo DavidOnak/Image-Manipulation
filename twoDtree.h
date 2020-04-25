@@ -2,11 +2,11 @@
 #define _TWODTREE_H_
 
 #include <utility>
-#include "cs221util/PNG.h"
-#include "cs221util/RGBAPixel.h"
+#include "imageUtil/PNG.h"
+#include "imageUtil/RGBAPixel.h"
 #include "stats.h"
 using namespace std;
-using namespace cs221util;
+using namespace imageUtil;
 
 /**
  * twoDtree: This is a structure used in decomposing an image

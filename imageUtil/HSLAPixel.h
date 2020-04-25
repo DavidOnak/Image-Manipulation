@@ -1,10 +1,8 @@
 #ifndef HSLAPixel_H
 #define HSLAPixel_H
 
-namespace cs221util {
-
+namespace imageUtil {
 	class HSLAPixel {
-
 		public:
 		double h;
 		double s;
@@ -14,7 +12,6 @@ namespace cs221util {
 		HSLAPixel();
 		HSLAPixel(double, double, double);
 		HSLAPixel(double, double, double, double);	 
-	 
 	};
 }
 

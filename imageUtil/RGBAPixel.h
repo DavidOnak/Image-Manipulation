@@ -1,17 +1,10 @@
-/**
- * @file RGBAPixel.h
- *
- * @author CS 225: Data Structures
- * @version 2018r1
- */
-
 #ifndef CS221_RGBAPIXEL_H_
 #define CS221_RGBAPIXEL_H_
 
 #include <iostream>
 #include <sstream>
 
-namespace cs221util {
+namespace imageUtil {
   class RGBAPixel {
   public:
     unsigned char r; /**< red component of pixel, [0,255] */
