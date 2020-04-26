@@ -1,9 +1,10 @@
-#ifndef CS221UTIL_PNG_H
-#define CS221UTIL_PNG_H
+#ifndef PNG_H_
+#define PNG_H_
 
 #include <string>
 #include <vector>
-#include "HSLAPixel.h"
+//#include "HSLAPixel.h"
+#include "RGBAPixel.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ namespace imageUtil {
       * @param width Width of the new image.
       * @param height Height of the new image.
       */
-    PNG(unsigned int width, unsigned int height);  
+    PNG(unsigned int width, unsigned int height);
 
     /**
       * Copy constructor: creates a new PNG image that is a copy of
@@ -34,7 +35,7 @@ namespace imageUtil {
       * Invoked by the system.
       */
     ~PNG();
-  
+
     /**
       * Assignment operator for setting two PNGs equal to one another.
       * @param other Image to copy into the current image.
@@ -80,7 +81,7 @@ namespace imageUtil {
       * @param y Y-coordinate for the pixel pointer to be grabbed from.
       * @return A pointer to the pixel at the given coordinates.
       */
-    HSLAPixel * getPixel(unsigned int x, unsigned int y);
+    RGBAPixel * getPixel(unsigned int x, unsigned int y) const;
 
     /**
       * Gets the width of this image.
@@ -102,17 +103,26 @@ namespace imageUtil {
       * @param newHeight New height of the image.
       */
     void resize(unsigned int newWidth, unsigned int newHeight);
-      
+
+    /**
+     * Computes a hash of the contents of the image.
+     */
+    std::size_t computeHash() const;
+
   private:
     unsigned int width_;            /*< Width of the image */
     unsigned int height_;           /*< Height of the image */
-    HSLAPixel *imageData_;          /*< Array of pixels */
+    RGBAPixel *imageData_;          /*< Array of pixels */
+    RGBAPixel defaultPixel_;        /*< Default pixel, returned in cases of errors */
 
     /**
      * Copeies the contents of `other` to self
      */
      void _copy(PNG const & other);
   };
+
+  std::ostream & operator<<(std::ostream & out, PNG const & pixel);
+  std::stringstream & operator<<(std::stringstream & out, PNG const & pixel);
 }
 
 #endif

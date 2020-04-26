@@ -11,12 +11,12 @@ using namespace imageUtil;
 class stats {
 
 private:
-	vector< vector< long >> sumRed;
-	vector< vector< long >> sumGreen;
-	vector< vector< long >> sumBlue;
-	vector< vector< long >> sumsqRed;
-	vector< vector< long >> sumsqGreen;
-	vector< vector< long >> sumsqBlue;
+	vector< vector< long > > sumRed;
+	vector< vector< long > > sumGreen;
+	vector< vector< long > > sumBlue;
+	vector< vector< long > > sumsqRed;
+	vector< vector< long > > sumsqGreen;
+	vector< vector< long > > sumsqBlue;
 
 	/* returns the sums of all pixel values across all color channels.
 	* useful in computing the score of a rectangle

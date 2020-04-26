@@ -37,9 +37,9 @@ namespace imageUtil {
     if ( a == 0 ) { return true; }
     if (fabs(a - other.a) > 0.01) { return false; }
 
-    if (fabs(r - other.r) > 2) { return false; } 
-    if (fabs(g - other.g) > 2) { return false; } 
-    if (fabs(b - other.b) > 2) { return false; } 
+    if (fabs(r - other.r) > 2) { return false; }
+    if (fabs(g - other.g) > 2) { return false; }
+    if (fabs(b - other.b) > 2) { return false; }
 
     return true;
 }
@@ -47,7 +47,7 @@ namespace imageUtil {
   bool RGBAPixel::operator!= (RGBAPixel const & other) const {
     return !(*this == other);
   }
-
+/*
   bool RGBAPixel::operator<  (RGBAPixel const & other) const {
     // order is reflected here. R->G->B.
       if (*this == other) { return false; }
@@ -66,5 +66,5 @@ namespace imageUtil {
     out << "(" << pixel.r << ", " << pixel.g << ", " << pixel.b << (pixel.a != 1 ? ", " + std::to_string(pixel.a) : "") << ")";
 
     return out;
-  }
+  }*/
 }

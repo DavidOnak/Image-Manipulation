@@ -41,7 +41,7 @@ twoDtree::twoDtree(PNG & imIn){
 // builds tree by splitting image then recusevly splits the new made halves
 twoDtree::Node * twoDtree::buildTree(stats & s, pair<int,int> ul, pair<int,int> lr, bool vert) {
 	// create new node and get columns and rows in rectangle
-	auto node = new twoDtree::Node(ul, lr, s.getAvg(ul, lr));
+	twoDtree::Node* node = new twoDtree::Node(ul, lr, s.getAvg(ul, lr));
 	int numCols = lr.first - ul.first + 1;
 	int numRows = lr.second - ul.second + 1;
 
@@ -301,7 +301,7 @@ void twoDtree::copy(const twoDtree & orig){
 // recersive helper function for copy
 twoDtree::Node * twoDtree::copyCurr(Node *head) {
 
-	auto node = new twoDtree::Node(head->upLeft, head->lowRight, head->avg);
+	twoDtree::Node* node = new twoDtree::Node(head->upLeft, head->lowRight, head->avg);
 	if (head->left != NULL) {
 		node->left = copyCurr(head->left);
 	}

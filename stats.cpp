@@ -113,7 +113,7 @@ long stats::getSum(char channel, pair<int,int> ul, pair<int,int> lr){
 			}
 			return returnB;
 		default:
-			printf("Invalid Channel\n");
+			cout << "Invalid Channel\n" << endl;
 			return 0;
 	}
 }
@@ -163,7 +163,7 @@ long stats::getSumSq(char channel, pair<int,int> ul, pair<int,int> lr){
 			}
 			return returnB;
 		default:
-			printf("Invalid Channel\n");
+			cout << "Invalid Channel\n" << endl;
 			return 0;
 	}
 }
