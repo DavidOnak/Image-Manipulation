@@ -11,4 +11,9 @@ The 64 bit executable file in this repository called Prune Image can prune an im
 
 The stats class caluates colour values of an image to allow for average colour and score calcuations. This class is used by the twoDtree class which creates the binary representation of a png. More details on prune and other methods the binary tree can do that are not used by the prune application can be read about in twoDtree.h.
 
-![alt text](https://github.com/DavidOnak/Image-Manipulation/blob/master/outputImages/pruned-doggo.png?raw=true)
+![Original Image before prune](https://github.com/DavidOnak/Image-Manipulation/blob/master/inputImages/doggo.png?raw=true)
+
+![After pruning with tolerance of 1000](https://github.com/DavidOnak/Image-Manipulation/blob/master/outputImages/pruned-doggo.png?raw=true)
+
+# Manipulation with HSLA Pixels
+Working on this right now, using HSLA pixels to represent a png effects can be done like grayscale or adding a watermark to an image
