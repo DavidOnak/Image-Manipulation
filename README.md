@@ -25,5 +25,5 @@ The 64 bit executable ImageManipulation.exe can apply one of these effects to a 
 ![Original Image before watermark](https://github.com/DavidOnak/Image-Manipulation/blob/master/inputImages/test.png?raw=true)
 Original Image before adding watermark.
 
-![After adding watermark](https://github.com/DavidOnak/Image-Manipulation/blob/master/outputImages/watermarked-test.png?raw=true)
+![After adding watermark](https://github.com/DavidOnak/Image-Manipulation/blob/master/outputImages/watermark-test.png?raw=true)
 After adding WaterMark.png as a watermark.
