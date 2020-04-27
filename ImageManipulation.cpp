@@ -57,6 +57,7 @@ int ImageManipulation() {
                         cout << "Not a valid entry!" << endl;
                         scanf("%i", &x);
                     }
+                    clean();
                     printf("Enter an y coordinate from 0 to %d\n", height);
                     int y;
                     scanf("%i", &y);
@@ -64,6 +65,7 @@ int ImageManipulation() {
                         cout << "Not a valid entry!" << endl;
                         scanf("%i", &y);
                     }
+                    clean();
                     out = createSpotlight(png, x, y);
                     newName = "spotlight";
                     valid = true;
@@ -100,9 +102,8 @@ int ImageManipulation() {
         out.writeToFile("outputImages/"+newName+"-"+name);
         printf("%s-%s as been added to outputImages.\n", newName.c_str(), name.c_str());
 
-        cout << "Type '1' to edit again otherwise press anything else to exit, you may have to enter twice." << endl;
+        cout << "Type '1' to edit again otherwise press anything else to exit." << endl;
         char input;
-        clean();
         scanf("%c", &input);
         clean();
         system ("CLS");
