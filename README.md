@@ -18,4 +18,12 @@ Original Image before prune.
 After pruning with tolerance of 1000.
 
 # Manipulation with HSLA Pixels
-Working on this right now, using HSLA pixels to represent a png effects can be done like grayscale or adding a watermark to an image
+A PNG can be represented by a class that constructs the image with HSLA pixels. By modifying these pixels effects can be done to an image such as applying a grayscale, adding a spotlight, ubcifying (changing hues of all pixels to ubc colours, yellow or blue), and adding a watermark. The HSLA pixel class represents a pixel with a value for hue, saturation, lumanince, and alpha; see ImageEffects.cpp on how each effect is obtained by changing these.
+
+The 64 bit executable ImageManipulation.exe can apply one of these effects to a PNG. To work, it requires a directory where it is located called inputImages with the images to manipulate and writes edited images into a directory called outputImages. The application will promt the user for all required inputs for these operations and the name of the image to use.
+
+![Original Image before watermark](https://github.com/DavidOnak/Image-Manipulation/blob/master/inputImages/test.png?raw=true)
+Original Image before adding watermark.
+
+![After adding watermark](https://github.com/DavidOnak/Image-Manipulation/blob/master/outputImages/watermarked-test.png?raw=true)
+After adding WaterMark.png as a watermark.
