@@ -106,7 +106,7 @@ hslaPNG ubcify(hslaPNG image) {
 
 
 /**
-* Returns an immge that has been watermarked by another image.
+* Returns an image that has been watermarked by another image.
 *
 * The luminance of every pixel of the second image is checked, if that
 * pixel's luminance is 1 (100%), then the pixel at the same location on
@@ -128,10 +128,10 @@ hslaPNG watermark(hslaPNG firstImage, hslaPNG secondImage) {
 			if (pixel2->l == 1.0) {
 				HSLAPixel *pixel1 = firstImage.getPixel(x, y);
 				pixel1->l += 0.2;
-				
+
 				// incase luminance gets too high set to 1
 				if (pixel1->l > 1.0) {
-					pixel1->l == 1.0;
+					pixel1->l = 1;
 				}
 			}
 		}
