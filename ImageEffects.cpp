@@ -123,11 +123,16 @@ hslaPNG watermark(hslaPNG firstImage, hslaPNG secondImage) {
 
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
-			HSLAPixel *pixel1 = firstImage.getPixel(x, y);
 			HSLAPixel *pixel2 = secondImage.getPixel(x, y);
 
 			if (pixel2->l == 1.0) {
+				HSLAPixel *pixel1 = firstImage.getPixel(x, y);
 				pixel1->l += 0.2;
+				
+				// incase luminance gets too high set to 1
+				if (pixel1->l > 1.0) {
+					pixel1->l == 1.0;
+				}
 			}
 		}
 	}
